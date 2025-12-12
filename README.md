@@ -74,3 +74,35 @@ scrape_configs:
         replacement: '127.0.0.1:9116'
 EOF
 ```
+
+🧊 Rubah Service systemd Prometheus agar bisa autostart
+```bash
+sudo tee /etc/systemd/system/prometheus.service > /dev/null << 'EOF'
+[Unit]
+Description=Prometheus Monitoring
+Documentation=https://prometheus.io/docs/introduction/overview/
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=prometheus
+Group=prometheus
+ExecStart=/usr/local/bin/prometheus \
+  --config.file=/etc/prometheus/prometheus.yml \
+  --storage.tsdb.path=/var/lib/prometheus \
+  --web.console.templates=/etc/prometheus/consoles \
+  --web.console.libraries=/etc/prometheus/console_libraries \
+  --web.listen-address=0.0.0.0:9090
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+🧊 Reload daemon dan Aktifkan Prometheus
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now prometheus
+```
