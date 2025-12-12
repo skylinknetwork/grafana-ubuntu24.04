@@ -170,7 +170,9 @@ sudo systemctl enable --now grafana-server
 ```
 
 ## 🚀 4. Config Grafana dan masukkan template dashboard
-🧊 Masukkan id & password default grafana (admin | admin)
+🧊 Masukkan id & password default grafana (admin | admin)<br>
+Akses web UI grafana <ip address VMWare>:port
+dalam contoh ini saya menggunakan IP > 10.20.20.5:3000
 ![001](https://github.com/user-attachments/assets/098c1fe0-4a32-48ae-b54f-324228ead55d)
 
 
