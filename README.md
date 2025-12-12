@@ -175,4 +175,9 @@ Akses web UI grafana ip_grafana:port<br>
 contoh kami pakai  IP > 10.20.20.5:3000
 ![001](https://github.com/user-attachments/assets/098c1fe0-4a32-48ae-b54f-324228ead55d)
 
-
+🧊 Sambungkan ke data source prometheus seperti ScreenShot dibawah ini
+![001](https://github.com/user-attachments/assets/642f6017-c169-4ba7-a38a-718cbf6e9e25)<br>
+![002](https://github.com/user-attachments/assets/485ea5c3-a29c-4c63-8d05-638214684cf2)<br>
+![003](https://github.com/user-attachments/assets/77ef1c4d-e58f-40dc-b8c4-b5f77845979f)<br>
+![004](https://github.com/user-attachments/assets/8c91a0a7-cb15-42ea-914b-ea9ca384f26a)<br>
+![005](https://github.com/user-attachments/assets/0acb6679-1480-4479-8245-89065c9ff7c0)<br>
