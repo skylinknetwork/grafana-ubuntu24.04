@@ -173,9 +173,9 @@ sudo systemctl enable --now grafana-server
 🧊 **Masukkan id & password default grafana (admin | admin)**<br>
 Akses web UI grafana ip_grafana:port<br>
 contoh kami pakai  IP > 10.20.20.5:3000
-![001](https://github.com/user-attachments/assets/098c1fe0-4a32-48ae-b54f-324228ead55d)<br>
+![001](https://github.com/user-attachments/assets/098c1fe0-4a32-48ae-b54f-324228ead55d)<br><br><br>
 
-🧊 **Sambungkan ke data source prometheus seperti ScreenShot dibawah ini**<br><br>
+🧊 **Sambungkan ke data source prometheus seperti ScreenShot dibawah ini**<br>
 ![001](https://github.com/user-attachments/assets/642f6017-c169-4ba7-a38a-718cbf6e9e25)<br>
 ![002](https://github.com/user-attachments/assets/485ea5c3-a29c-4c63-8d05-638214684cf2)<br>
 ![003](https://github.com/user-attachments/assets/77ef1c4d-e58f-40dc-b8c4-b5f77845979f)<br>
