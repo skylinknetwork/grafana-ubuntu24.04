@@ -6,27 +6,27 @@ Kami menggunakan [Putty](https://putty.org/index.html) untuk copy paster dari Gi
    - pembaruan paket di repositori
    - Update semua paket yang ada
    - Instal tools untuk download file
-```bash
+```
 sudo apt update
 sudo apt upgrade -y
 sudo apt install -y wget curl gnupg2 tar
 ```
 ## 🚀 1. Install Prometheus
 🧊 Buat user & group untuk Prometheus
-```bash
+```
 sudo groupadd --system prometheus
 sudo useradd --system --no-create-home \
   --shell /usr/sbin/nologin \
   --gid prometheus prometheus
 ```
 🧊 Buat folder untuk instalasi prometheus
-```bash
+```
 sudo mkdir -p /etc/prometheus
 sudo mkdir -p /var/lib/prometheus
 ```
 
 🧊 Install Prometheus 2.43.0 dan masuk ke folder /tmp
-```bash
+```
 cd /tmp
 wget https://github.com/prometheus/prometheus/releases/download/v2.43.0/prometheus-2.43.0.linux-amd64.tar.gz
 tar xvf prometheus-2.43.0.linux-amd64.tar.gz
@@ -39,14 +39,14 @@ sudo mkdir -p /etc/prometheus/consoles /etc/prometheus/console_libraries
 sudo mv consoles/ console_libraries/ /etc/prometheus/
 ```
 🧊 Set kepemilikan file prometheus (user : prometheus | group : prometheus)
-```bash
+```
 sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
 ```
 
 🧊 Rubah Konfigurasi prometheus.yml<p>
 **Jangan lupa untuk mengganti IP tujuan yang sesuai dengan device anda**<br>
 **Bisa copy paste dulu di Notepad baru dicopy ke [Putty](https://putty.org/index.html)**
-```bash
+```
 sudo tee /etc/prometheus/prometheus.yml > /dev/null << 'EOF'
 global:
   scrape_interval: 15s
@@ -76,7 +76,7 @@ EOF
 ```
 
 🧊 Rubah Service systemd Prometheus agar bisa autostart
-```bash
+```
 sudo tee /etc/systemd/system/prometheus.service > /dev/null << 'EOF'
 [Unit]
 Description=Prometheus Monitoring
@@ -102,13 +102,13 @@ EOF
 ```
 
 🧊 Reload daemon dan Aktifkan Prometheus
-```bash
+```
 sudo systemctl daemon-reload
 sudo systemctl enable --now prometheus
 ```
 ## 🚀 2. Install snmp_exporter 0.21.0
 🧊 Download, Extract dan pindah ke folder instalasi SNMP_Exporter
-```bash
+```
 cd /tmp
 wget https://github.com/prometheus/snmp_exporter/releases/download/v0.21.0/snmp_exporter-0.21.0.linux-amd64.tar.gz
 tar xvf snmp_exporter-0.21.0.linux-amd64.tar.gz
@@ -116,15 +116,55 @@ cd snmp_exporter-0.21.0.linux-amd64
 ```
 
 🧊 Add User untuk konfigurasi snmp_exporter
-```sh
+```
 sudo useradd --system --no-create-home \
   --shell /usr/sbin/nologin snmp-exporter
 ```
 
 🧊 Pindahkan file snmp_exporter
-```sh
+```
 sudo mkdir -p /etc/snmp_exporter
 sudo mv snmp.yml /etc/snmp_exporter/snmp.yml
 sudo mv snmp_exporter /usr/local/bin/snmp_exporter
 sudo chown -R snmp-exporter:snmp-exporter /etc/snmp_exporter
+```
+
+🧊 Buat Service systemd untuk snmp_exporter
+```
+sudo tee /etc/systemd/system/snmp_exporter.service > /dev/null << 'EOF'
+[Unit]
+Description=Prometheus SNMP Exporter
+After=network.target
+
+[Service]
+Type=simple
+User=snmp-exporter
+Group=snmp-exporter
+ExecStart=/usr/local/bin/snmp_exporter \
+  --config.file=/etc/snmp_exporter/snmp.yml
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+🧊 Reload daemon & Aktifkan snmp_exporter
+```
+sudo systemctl daemon-reload
+sudo systemctl enable --now snmp_exporter
+```
+
+## 🚀 3. Install Grafana
+🧊 Install Grafana & aktivasi Sekali crot
+```
+sudo apt install -y software-properties-common curl gnupg2
+echo "deb https://packages.grafana.com/oss/deb stable main" \
+ | sudo tee /etc/apt/sources.list.d/grafana.list
+curl -s https://packages.grafana.com/gpg.key \
+ | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/grafana.gpg
+sudo apt update
+sudo apt install -y grafana
+sudo systemctl daemon-reload
+sudo systemctl enable --now grafana-server
 ```
