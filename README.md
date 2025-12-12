@@ -44,7 +44,7 @@ sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
 
 🧊 Rubah Konfigurasi prometheus.yml<p>
 **Jangan lupa untuk mengganti IP tujuan yang sesuai dengan device anda**<br>
-**Bisa copy paste dulu di Notepad baru dicopy ke [Putty]([https://pages.github.com/](https://putty.org/index.html)).**
+**Bisa copy paste dulu di Notepad baru dicopy ke [Putty](https://putty.org/index.html)**
 ```bash
 sudo tee /etc/prometheus/prometheus.yml > /dev/null << 'EOF'
 global:
