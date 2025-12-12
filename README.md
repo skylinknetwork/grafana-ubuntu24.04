@@ -169,4 +169,8 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now grafana-server
 ```
 
-![5bde1c839e7b9cb61d1b73a8def65ccd](https://github.com/user-attachments/assets/240ebbe8-097b-416a-846f-b8e1eae4e384)
+## 🚀 4. Config Grafana dan masukkan template dashboard
+🧊 Masukkan id & password default grafana (admin | admin)
+![001](https://github.com/user-attachments/assets/098c1fe0-4a32-48ae-b54f-324228ead55d)
+
+
