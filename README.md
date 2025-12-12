@@ -11,7 +11,7 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install -y wget curl gnupg2 tar
 ```
-
+## Install Prometheus
 🧊 Buat user & group untuk Prometheus
 ```bash
 sudo groupadd --system prometheus
@@ -106,3 +106,11 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable --now prometheus
 ```
+## 🧊 Install snmp_exporter 0.21.0
+```bash
+cd /tmp
+wget https://github.com/prometheus/snmp_exporter/releases/download/v0.21.0/snmp_exporter-0.21.0.linux-amd64.tar.gz
+tar xvf snmp_exporter-0.21.0.linux-amd64.tar.gz
+cd snmp_exporter-0.21.0.linux-amd64
+```
+
