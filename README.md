@@ -114,3 +114,17 @@ wget https://github.com/prometheus/snmp_exporter/releases/download/v0.21.0/snmp_
 tar xvf snmp_exporter-0.21.0.linux-amd64.tar.gz
 cd snmp_exporter-0.21.0.linux-amd64
 ```
+
+🧊 Add User untuk konfigurasi snmp_exporter
+```sh
+sudo useradd --system --no-create-home \
+  --shell /usr/sbin/nologin snmp-exporter
+```
+
+🧊 Pindahkan file snmp_exporter
+```sh
+sudo mkdir -p /etc/snmp_exporter
+sudo mv snmp.yml /etc/snmp_exporter/snmp.yml
+sudo mv snmp_exporter /usr/local/bin/snmp_exporter
+sudo chown -R snmp-exporter:snmp-exporter /etc/snmp_exporter
+```
