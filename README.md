@@ -1,5 +1,8 @@
 # install Grafana di Ubuntu Server 24.04
-Disini kita akan coba install Grafana di Ubuntu Server 24.04<br>
+### Untuk yang tidak mau ribet mengikuti semua step dibawah ini<br>
+### kami ada installer hanya tinggal copas 1 baris otomatis terinstall Grafana<br>
+### Kontak kami di myskylinknetwork@gmail.com
+<br>Disini kita akan coba install Grafana di Ubuntu Server 24.04<br>
 Kami menggunakan [Putty](https://putty.org/index.html) untuk copy paster dari Github ke Terminal
 
 🧊 Persiapan di Ubuntu 24.04
