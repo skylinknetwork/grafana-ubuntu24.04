@@ -1,4 +1,4 @@
-# Tutorial install Grafana di Ubuntu Server 24.04
+# install Grafana di Ubuntu Server 24.04
 Disini kita akan coba install Grafana di Ubuntu Server 24.04<br>
 Kami menggunakan [Putty](https://putty.org/index.html) untuk copy paster dari Github ke Terminal
 
@@ -106,11 +106,11 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable --now prometheus
 ```
-## 🧊 Install snmp_exporter 0.21.0
+## Install snmp_exporter 0.21.0
+🧊 Download, Extract dan pindah ke folder instalasi SNMP_Exporter
 ```bash
 cd /tmp
 wget https://github.com/prometheus/snmp_exporter/releases/download/v0.21.0/snmp_exporter-0.21.0.linux-amd64.tar.gz
 tar xvf snmp_exporter-0.21.0.linux-amd64.tar.gz
 cd snmp_exporter-0.21.0.linux-amd64
 ```
-
