@@ -168,3 +168,5 @@ sudo apt install -y grafana
 sudo systemctl daemon-reload
 sudo systemctl enable --now grafana-server
 ```
+
+![5bde1c839e7b9cb61d1b73a8def65ccd](https://github.com/user-attachments/assets/240ebbe8-097b-416a-846f-b8e1eae4e384)
