@@ -182,7 +182,7 @@ contoh kami pakai  IP > 10.20.20.5:3000
 ![004](https://github.com/user-attachments/assets/8c91a0a7-cb15-42ea-914b-ea9ca384f26a)<br>
 ![005](https://github.com/user-attachments/assets/0acb6679-1480-4479-8245-89065c9ff7c0)<br><br><br>
 
-🧊 **Import template Dashboard dari X86 Skylink**<br><br>
+🧊 **Import template Dashboard dari Dashboard Mikrotik X86 Skylink Network**<br><br>
 ![001](https://github.com/user-attachments/assets/9c633d6c-ef3a-4050-840d-ebcb15f5012b)<br>
 ![002](https://github.com/user-attachments/assets/6efb04a6-67a3-45bb-8dc5-afe5f1eb5da8)<br>
 ![003](https://github.com/user-attachments/assets/4ff78357-9a8c-43b1-b918-80ac0f5e0b1e)<br>
