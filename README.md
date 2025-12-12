@@ -175,9 +175,16 @@ Akses web UI grafana ip_grafana:port<br>
 contoh kami pakai  IP > 10.20.20.5:3000
 ![001](https://github.com/user-attachments/assets/098c1fe0-4a32-48ae-b54f-324228ead55d)<br><br><br>
 
-🧊 **Sambungkan ke data source prometheus seperti ScreenShot dibawah ini**<br>
+🧊 **Sambungkan ke data source prometheus seperti ScreenShot dibawah ini**<br><br>
 ![001](https://github.com/user-attachments/assets/642f6017-c169-4ba7-a38a-718cbf6e9e25)<br>
 ![002](https://github.com/user-attachments/assets/485ea5c3-a29c-4c63-8d05-638214684cf2)<br>
 ![003](https://github.com/user-attachments/assets/77ef1c4d-e58f-40dc-b8c4-b5f77845979f)<br>
 ![004](https://github.com/user-attachments/assets/8c91a0a7-cb15-42ea-914b-ea9ca384f26a)<br>
-![005](https://github.com/user-attachments/assets/0acb6679-1480-4479-8245-89065c9ff7c0)<br>
+![005](https://github.com/user-attachments/assets/0acb6679-1480-4479-8245-89065c9ff7c0)<br><br><br>
+
+🧊 **Import template Dashboard dari X86 Skylink**<br><br>
+![001](https://github.com/user-attachments/assets/9c633d6c-ef3a-4050-840d-ebcb15f5012b)<br>
+![002](https://github.com/user-attachments/assets/6efb04a6-67a3-45bb-8dc5-afe5f1eb5da8)<br>
+![003](https://github.com/user-attachments/assets/4ff78357-9a8c-43b1-b918-80ac0f5e0b1e)<br>
+![004](https://github.com/user-attachments/assets/865c4e92-f49b-420c-9bfb-51fdbe865154)<br>
+![005](https://github.com/user-attachments/assets/0459ec1e-e685-4636-9e50-1c1aff646b40)<br>
